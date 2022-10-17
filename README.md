@@ -1,9 +1,10 @@
-# AvisaYa-Frontend
-## Repositorio del frontend del proyecto AvisaYa
+# Repositorio del frontend del proyecto AvisaYa
+## Requisitos para correr el proyecto:
 
-## Comando para instalar Angular:
-### npm install -g @angular/cli
+### Descargar e instalar nodejs: https://nodejs.org/en/download/
 
-## Comando para correr el proyecto: 
-### npm install
-### ng serve --o
+### Instalar Angular: npm install -g @angular/cli
+
+### Ejecutar los siguientes comandos: 
+#### npm install
+#### ng serve --o
