@@ -1,1 +1,96 @@
-<p>register works!</p>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.component.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background-color: #303641;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container-register">
+        <div id="title">
+            <i class="material-icons lock">lock</i> Registro-AvisaYA!<i class="material-icons lock">campaign</i>
+        </div>
+
+
+        <form>
+
+          
+          <div class="input">
+            <div class="input-addon">
+                <i class="material-icons">face</i>
+            </div>
+            <input id="username" placeholder="Nombre Completo" type="text" required class="validate" autocomplete="off">
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="input">
+          <div class="input-addon">
+              <i class="material-icons">
+                <span class="material-symbols-outlined">
+                  co_present
+                  </span>
+              </i>
+          </div>
+          <input id="username" placeholder="DNI" type="text" required class="validate" autocomplete="off">
+      </div>
+
+      <div class="clearfix"></div>
+
+
+        
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">email</i>
+                </div>
+                <input id="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+          
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+            </div>
+
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">lock</i>
+                </div>
+                <input id="password" placeholder="Verificar Password" type="password" required class="validate" autocomplete="off">
+            </div>
+
+    <p></p>
+
+            <input type="submit" value="Register" />
+        </form>
+
+        <div class="privacy">
+            <a href="#">Politica de privacidad</a>
+        </div>
+
+        <div class="register">
+            Ya tienes una cuenta ?
+            <a href="#"><button id="register-link">Login</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
