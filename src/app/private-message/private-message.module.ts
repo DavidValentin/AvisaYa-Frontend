@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { PrivateMessageRoutingModule } from './private-message-routing.module';
 
-
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    PrivateMessageRoutingModule
-  ]
+  imports: [CommonModule, PrivateMessageRoutingModule],
 })
-export class PrivateMessageModule { }
+export class PrivateMessageModule {}

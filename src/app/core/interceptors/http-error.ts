@@ -1,2 +1,1 @@
-export interface HttpError {
-}
+export interface HttpError {}
