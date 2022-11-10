@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlacesService } from '../services/places.service';
 
 @Component({
   selector: 'app-registro-delictivo',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroDelictivoComponent implements OnInit {
   public fechaActual: string;
-  constructor() {}
+  constructor(private placesService: PlacesService) {}
 
   ngOnInit(): void {
     this.getFechaActual();
