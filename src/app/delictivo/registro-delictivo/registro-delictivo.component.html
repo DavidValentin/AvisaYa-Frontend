@@ -1,1 +1,29 @@
 <p>registro-delictivo works!</p>
+<div class="container">
+  <ng-container>
+    <h1>Registro de acto delictivo</h1>
+    <form class="registro">
+        <div class="input">
+            <p class="text">Titulo: </p>
+            <input class="entrada" type="text" >
+        </div>
+        <div class="input">
+            <p class="text">Descripci&oacute;n:</p>
+            <input class="entrada" type="text">
+        </div>
+        <div class="input">
+            <p class="text">Fecha:</p>
+            <input class="entrada" type="date" value="{{fechaActual}}">
+        </div>
+        <div class="input">
+            <p class="text">Hora:</p>
+            <input class="entrada" type="text">
+        </div>
+        <div class="input">
+            <p class="text">Lugar:</p>
+            <input class="entrada" type="text">
+        </div>
+
+    </form>
+  </ng-container>
+</div>

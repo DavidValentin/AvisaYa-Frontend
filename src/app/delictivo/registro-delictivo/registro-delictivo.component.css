@@ -1,0 +1,17 @@
+.registro {
+  border: solid rgb(114, 206, 114);
+}
+
+.input {
+  margin: 2%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text {
+  width: 8rem;
+}
+
+.entrada {
+  border-radius: 1rem;
+}
