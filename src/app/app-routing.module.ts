@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./delictivo/delictivo.module').then(m => m.DelictivoModule),
   },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./security/security.module').then(m => m.SecurityModule),
+  },
   { path: '**', component: NotFoundComponent },
 ];
 
