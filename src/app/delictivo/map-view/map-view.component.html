@@ -1,3 +1,11 @@
-<div #mapDiv class="map-container"> 
 
-</div>
+<div class="modal-header">
+    <h4 class="modal-title">Selecciona el lugar:</h4>
+  </div>
+  <div class="modal-body">
+    <div #mapDiv class="map-container"></div>
+    <pre #coordinates class="coordinates"></pre>
+  </div>
+  <div class="modal-footer">
+    <button (click)="guardarCoordenadas()" type="submit" class="btn btn-primary w-100">Guardar ubicacion</button>
+  </div>

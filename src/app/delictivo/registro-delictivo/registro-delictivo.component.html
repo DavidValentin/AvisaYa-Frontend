@@ -21,7 +21,10 @@
         </div>
         <div class="input">     
             <p class="text">Lugar:</p>
-            <input class="entrada" type="text">
+            <button type="button" class="entrada" (click)="openModalMapa()">
+                Seleccionar lugar
+            </button>
+            <small>Longitud: {{longitud}}<br> Latitud: {{latitud}}</small>
         </div>
 
         <div class="input">
