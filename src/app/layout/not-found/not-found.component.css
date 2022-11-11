@@ -1,0 +1,31 @@
+.cont_principal{
+  height: 500%px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.not-found{
+  width: 140%;
+  margin: auto;
+}
+
+.text_error{
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration:none;
+  border-radius: 50px;
+  border-width: 10ch;
+  border: solid rgb(114, 206, 114);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 8em;
+  font-size: large;
+  font-weight: 600;
+}
