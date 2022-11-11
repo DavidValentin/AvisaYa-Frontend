@@ -7,6 +7,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./delictivo/delictivo.module').then(m => m.DelictivoModule),
   },
+  {
+    path: 'security',
+    loadChildren: () =>
+      import('./security/security.module').then(m => m.SecurityModule),
+  },
 ];
 
 @NgModule({
