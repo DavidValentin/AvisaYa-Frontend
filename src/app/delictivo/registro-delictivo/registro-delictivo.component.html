@@ -1,4 +1,3 @@
-<p>registro-delictivo works!</p>
 <div class="container">
   <ng-container>
     <h1>Registro de acto delictivo</h1>
@@ -26,16 +25,19 @@
             </button>
             <small>Longitud: {{longitud}}<br> Latitud: {{latitud}}</small>
         </div>
-
+        <div class="input">     
+            <p class="text">Evidencia:</p>
+            <input type="file" id="btn_enviar" class="entrada" (change)="onFileChange($event)" />
+        </div>
         <div class="input">
             <p class="text">Categoria:</p>
             <select name="" id="" class="entrada">
               <option value="Robo">Robo</option>
               <option value="Asesinato">Asesinato</option>
               <option value="Drogadiccion">Drogadiccion</option>
+              <option value="Corrupcion">Corrupci&oacute;n</option>
             </select>
         </div>
-
     </form>
   </ng-container>
 </div>

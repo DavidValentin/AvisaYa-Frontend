@@ -9,8 +9,13 @@ import { MapViewComponent } from '../map-view/map-view.component';
 })
 export class RegistroDelictivoComponent implements OnInit {
   fechaActual: string;
+
   latitud: any;
   longitud: any;
+
+  image: any[];
+  nombreImagen: string;
+
   constructor(private modalService: NgbModal) {}
 
   openModalMapa() {
@@ -30,6 +35,12 @@ export class RegistroDelictivoComponent implements OnInit {
     this.getFechaActual();
   }
 
+  onFileChange(event: any) {
+    //asignacion de la data seleccionada de la imagen
+    this.image = event.target.files;
+    //asignacion del campo imagen del nombre de la imagen seleccionada
+    this.nombreImagen = this.image[0].name;
+  }
   getFechaActual() {
     let fecha: Date = new Date();
     let anio = fecha.getFullYear();
