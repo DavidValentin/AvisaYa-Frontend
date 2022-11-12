@@ -1,43 +1,59 @@
 <div class="container">
   <ng-container>
-    <h1>Registro de acto delictivo</h1>
-    <form class="registro">
+    <h1 class="titulo">Registro de acto delictivo</h1>
+    <div class="registro">
+      <form class="formulario">
         <div class="input">
-            <p class="text">Titulo: </p>
-            <input class="entrada" type="text" >
-        </div>
-        <div class="input">
-            <p class="text">Descripci&oacute;n:</p>
-            <input class="entrada" type="text">
+          <p class="text">Titulo:</p>
+          <input class="entrada" type="text" />
         </div>
         <div class="input">
-            <p class="text">Fecha:</p>
-            <input class="entrada" type="date" value="{{fechaActual}}">
+          <p class="text">Descripci&oacute;n:</p>
+          <input class="entrada" type="text" />
         </div>
         <div class="input">
-            <p class="text">Hora:</p>
-            <input class="entrada" type="time">
-        </div>
-        <div class="input">     
-            <p class="text">Lugar:</p>
-            <button type="button" class="entrada" (click)="openModalMapa()">
-                Seleccionar lugar
-            </button>
-            <small>Longitud: {{longitud}}<br> Latitud: {{latitud}}</small>
-        </div>
-        <div class="input">     
-            <p class="text">Evidencia:</p>
-            <input type="file" id="btn_enviar" class="entrada" (change)="onFileChange($event)" />
+          <p class="text">Fecha:</p>
+          <input
+            class="entrada"
+            type="date"
+            value="{{ fechaActual }}"
+            max="{{ fechaActual }}" />
         </div>
         <div class="input">
-            <p class="text">Categoria:</p>
-            <select name="" id="" class="entrada">
-              <option value="Robo">Robo</option>
-              <option value="Asesinato">Asesinato</option>
-              <option value="Drogadiccion">Drogadiccion</option>
-              <option value="Corrupcion">Corrupci&oacute;n</option>
-            </select>
+          <p class="text">Hora:</p>
+          <input class="entrada" type="time" />
         </div>
-    </form>
+        <div class="input">
+          <p class="text">Lugar:</p>
+          <button type="button" class="entrada" (click)="openModalMapa()">
+            Seleccionar lugar
+          </button>
+          <small
+            >Longitud: {{ longitud }}<br />
+            Latitud: {{ latitud }}</small
+          >
+        </div>
+        <div class="input">
+          <p class="text">Evidencia:</p>
+          <input
+            type="file"
+            id="btn_enviar"
+            class="entrada"
+            (change)="onFileChange($event)" />
+        </div>
+        <div class="input">
+          <p class="text">Categoria:</p>
+          <select name="" id="" class="entrada">
+            <option value="Robo">Robo</option>
+            <option value="Asesinato">Asesinato</option>
+            <option value="Drogadiccion">Drogadiccion</option>
+            <option value="Corrupcion">Corrupci&oacute;n</option>
+          </select>
+        </div>
+      </form>
+      <div class="svg-container">
+        <img src="assets/policia.svg" class="policia">
+      </div>
+    </div>
   </ng-container>
 </div>

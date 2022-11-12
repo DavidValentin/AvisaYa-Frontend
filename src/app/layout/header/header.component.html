@@ -1,1 +1,43 @@
-<p>header works!</p>
+<div class="cabecera">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark py-2">
+    <a class="navbar-brand" routerLink="/">AvisaYa!</a>
+
+    <div class="navbar-collapse collapse align-self-end" id="menu">
+      <!-- se crea la lista de los elementos de navegacion -->
+      <ul class="navbar-nav ml-auto align-self-end ">
+        <!-- Primer elemento de la lista -->
+        <li class="nav-item align-middle">
+          <!-- Link hacia la sección principal -->
+          <a class="nav-link" routerLink="/">Inicio </a>
+          <!-- Se cierra la etiqueta del primer link  -->
+        </li>
+        <!-- Se cierra la etiqueta del primer elemento -->
+        <!-- Segundo elemento de la lista -->
+        <li class="nav-item align-middle">
+          <!-- Link hacia la sección cursos -->
+          <a class="nav-link" routerLink="/cursos">Mapa Delictivo</a>
+          <!-- Se cierra la etiqueta del segundo link  -->
+        </li>
+        <!-- Se cierra la etiqueta del segundo elemento -->
+        <!-- Tercer elemento de la lista -->
+        <li class="nav-item align-middle mr-md-3">
+          <!-- Link hacia la sección sugerencias -->
+          <a class="nav-link" routerLink="/delictivo/registro">Acto Delictivo</a>
+          <!-- Se cierra la etiqueta del tercer link  -->
+        </li>
+        <li class="nav-item align-middle">
+            <!-- Link hacia la sección login -->
+            <a class="btn btn-success my-2 my-sm-0" routerLink="/security/login">
+              Iniciar sesión
+            </a>
+            <!-- Se cierra la etiqueta del cuarto link  -->
+          </li>
+      </ul>
+      <!-- Se cierra la lista de navegación -->
+    </div>
+    <!-- Se cierra el navbar -->
+  </nav>
+  <!-- Se cierra la etiqueta del contenedor -->
+
+  <!-- Se cierra la etiqueta del header -->
+</div>

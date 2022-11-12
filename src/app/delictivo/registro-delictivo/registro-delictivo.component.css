@@ -1,14 +1,38 @@
+.titulo{
+  display: flex;
+  justify-content: center;
+}
 .registro {
   border: solid rgb(114, 206, 114);
+  display: flex;
+  justify-content: flex-start;
+}
+.formulario{
+  width: 55%;
+}
+.svg-container{
+  margin-left: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.policia{
+  width:  150%;
+}
+
+.formulario{
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .input {
-  margin: 2%;
+  margin: 3%;
   display: flex;
   justify-content: flex-start;
 }
 
 .text {
+  margin-left: 15%;
   width: 8rem;
 }
 
