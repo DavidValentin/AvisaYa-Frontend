@@ -5,11 +5,18 @@
       <form class="formulario">
         <div class="input">
           <p class="text">Titulo:</p>
-          <input class="entrada" type="text" />
+          <input class="entrada" placeholder="Titulo" type="text" />
         </div>
         <div class="input">
           <p class="text">Descripci&oacute;n:</p>
-          <input class="entrada" type="text" />
+          <textarea
+          id="descripcionCurso"
+          type="text"
+          formControlName="descripcion"
+          class="entrada"
+          rows="4"
+          placeholder="Descripción"
+        ></textarea>
         </div>
         <div class="input">
           <p class="text">Fecha:</p>
@@ -28,10 +35,15 @@
           <button type="button" class="entrada" (click)="openModalMapa()">
             Seleccionar lugar
           </button>
-          <small
+          
+        </div>
+        <div class="input">
+        <small class="text"></small>
+        <small
             >Longitud: {{ longitud }}<br />
             Latitud: {{ latitud }}</small
-          >
+          > 
+
         </div>
         <div class="input">
           <p class="text">Evidencia:</p>

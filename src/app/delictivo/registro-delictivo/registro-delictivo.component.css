@@ -37,5 +37,6 @@
 }
 
 .entrada {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  width: 16rem;
 }
