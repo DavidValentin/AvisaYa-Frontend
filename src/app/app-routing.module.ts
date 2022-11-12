@@ -9,7 +9,7 @@ const routes: Routes = [
       import('./delictivo/delictivo.module').then(m => m.DelictivoModule),
   },
   {
-    path: 'login',
+    path: 'security',
     loadChildren: () =>
       import('./security/security.module').then(m => m.SecurityModule),
   },
