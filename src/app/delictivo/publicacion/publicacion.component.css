@@ -1,0 +1,31 @@
+.titulo {
+  display: flex;
+  justify-content: left;
+  margin-top: 10px;
+}
+
+.button {
+    display: flex;
+    justify-content: right;
+    margin-top: 8px;
+    margin-left: 310px;
+  }
+
+.datos {
+  border: solid rgb(114, 206, 114);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.text-justify {
+    margin-top: 25px;
+    text-align: justify;
+  }
+
+h3 {
+ margin-top: 10px;
+}
+
+h4 {
+    margin-top: 15px;
+   }
