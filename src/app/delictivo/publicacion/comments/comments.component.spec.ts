@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DelictivoModule } from '../../delictivo.module';
+import { PublicacionComponent } from '../publicacion.component';
 
 import { CommentsComponent } from './comments.component';
 
@@ -8,9 +10,9 @@ describe('CommentsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommentsComponent ]
-    })
-    .compileComponents();
+      imports: [DelictivoModule],
+      declarations: [CommentsComponent, PublicacionComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CommentsComponent);
     component = fixture.componentInstance;

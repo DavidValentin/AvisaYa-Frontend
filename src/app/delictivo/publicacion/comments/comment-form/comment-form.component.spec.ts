@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DelictivoModule } from 'src/app/delictivo/delictivo.module';
 
 import { CommentFormComponent } from './comment-form.component';
 
@@ -8,9 +9,9 @@ describe('CommentFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommentFormComponent ]
-    })
-    .compileComponents();
+      imports: [DelictivoModule],
+      declarations: [CommentFormComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CommentFormComponent);
     component = fixture.componentInstance;
