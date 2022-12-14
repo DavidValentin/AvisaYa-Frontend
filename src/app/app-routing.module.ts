@@ -18,6 +18,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./security/security.module').then(m => m.SecurityModule),
   },
+
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then(m => m.AdminModule),
+  },
+
+
   { path: '**', component: NotFoundComponent },
 ];
 
