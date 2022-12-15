@@ -6,7 +6,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { FormComponent } from './components/form/form.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -14,6 +15,6 @@ import { FormComponent } from './components/form/form.component';
     RegisterComponent,
     FormComponent,
   ],
-  imports: [CommonModule, SecurityRoutingModule],
+  imports: [CommonModule, ReactiveFormsModule, SecurityRoutingModule],
 })
 export class SecurityModule {}

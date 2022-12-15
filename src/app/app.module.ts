@@ -8,6 +8,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NotFoundComponent } from './layout/not-found/not-found.component';
 import { InicioComponent } from './layout/inicio/inicio.component';
 import { DelictivoModule } from './delictivo/delictivo.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { DelictivoModule } from './delictivo/delictivo.module';
     NotFoundComponent,
     InicioComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, DelictivoModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, DelictivoModule],
   providers: [],
   bootstrap: [AppComponent],
 })

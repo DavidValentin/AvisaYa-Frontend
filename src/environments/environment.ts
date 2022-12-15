@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   api: {
-    baseUrl: '',
+    baseUrl: 'https://avisa-ya-backend-acto-delictivo-2.vercel.app/api/',
   },
 };
 
