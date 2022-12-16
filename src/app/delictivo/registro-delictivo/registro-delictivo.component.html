@@ -2,10 +2,10 @@
   <ng-container>
     <h1 class="titulo">Registro de acto delictivo</h1>
     <div class="registro">
-      <form class="formulario">
+      <form class="formulario" [formGroup]="delictivoForm" autocomplete="off">
         <div class="input">
           <p class="text">T&iacute;tulo:</p>
-          <input class="entrada" placeholder="Título" type="text" />
+          <input class="entrada" placeholder="Título" formControlName="titulo" type="text" />
         </div>
         <div class="input">
           <p class="text">Descripci&oacute;n:</p>
@@ -23,12 +23,13 @@
           <input
             class="entrada"
             type="date"
+            formControlName="fecha"
             value="{{ fechaActual }}"
             max="{{ fechaActual }}" />
         </div>
         <div class="input">
           <p class="text">Hora:</p>
-          <input class="entrada" type="time" />
+          <input class="entrada" formControlName="hora" type="time" />
         </div>
         <div class="input">
           <p class="text">Lugar:</p>
@@ -55,12 +56,20 @@
         </div>
         <div class="input">
           <p class="text">Categoria:</p>
-          <select name="" id="" class="entrada">
+          <select name="" id="" formControlName="categoria" class="entrada">
             <option value="Robo">Robo</option>
             <option value="Asesinato">Asesinato</option>
             <option value="Drogadiccion">Drogadiccion</option>
             <option value="Corrupcion">Corrupci&oacute;n</option>
           </select>
+        </div>
+        <div class="boton" >
+          <button
+              type="button"
+              (click)="crearActoDelictivo()"
+              class="btn btn-success my-2 my-sm-0">
+              Registrar Acto Delictivo
+          </button>
         </div>
       </form>
       <div class="svg-container">
