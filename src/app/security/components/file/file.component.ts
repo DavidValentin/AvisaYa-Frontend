@@ -17,14 +17,19 @@ export class FileComponent implements OnInit {
     this.archivo = event.target.files[0];
   }
 
-  saveFile(file: any) {
+  saveFile() {
     let reader = new FileReader();
-    file = this.archivo;
+    let file = this.archivo;
+    let usuario_id = 1;
+    // +sessionStorage.getItem('usuario_id')
+
     reader.readAsDataURL(file);
     reader.onloadend = () => {
-      this.fileService.subirImagen('file.name', reader.result, 1).then(url => {
-        console.log(url);
-      });
+      this.fileService
+        .subirImagen(file.name, reader.result, usuario_id)
+        .then(url => {
+          console.log(url);
+        });
     };
   }
 }

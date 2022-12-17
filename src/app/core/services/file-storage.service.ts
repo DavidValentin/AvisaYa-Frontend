@@ -17,6 +17,8 @@ export class FileStorageService {
 
       return res.ref.getDownloadURL();
     } catch (error) {
+      console.log(error);
+
       return null;
     }
   }
