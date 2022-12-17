@@ -9,7 +9,9 @@ import { User } from '../models/user';
 })
 export class UserService {
   urlApi: string = `${environment.api.baseUrl}`;
+
   constructor(private http: HttpClient) {}
+
   crearUsuario(user: User): Observable<any> {
     return this.http.post(`${this.urlApi}user/registro`, user).pipe(
       map((response: any) => response.user as User),
@@ -21,6 +23,19 @@ export class UserService {
           console.error(e.error.mensaje);
         }
         return throwError(e);
+      })
+    );
+  }
+
+  auth(user: User): Observable<any> {
+    return this.http.post(`${this.urlApi}user/auth`, user).pipe(
+      map((userData: any) => {
+        console.log('userdata', userData);
+        // if (userData.code == 200) {
+        sessionStorage.setItem('username', userData?.user.usuario);
+        sessionStorage.setItem('tokenAuth', userData.token);
+        // }
+        return userData;
       })
     );
   }
