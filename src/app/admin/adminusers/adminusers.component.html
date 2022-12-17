@@ -1,0 +1,75 @@
+<section class="vh-100">
+    <p style="font-size: 50px; text-align:center"> Administración de usuarios</p>
+    <br>
+
+ <!-- Tabla -lista de usuarios -->
+  <div class="container-fluid h-custom">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">NOMBRE DE USUARIO</th>
+          <th scope="col">Email</th>
+          <th scope="col">DNI</th>
+          <th scope="col">ACCION</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Prueba1</td>
+          <td>prueba1@gmail.com</td>
+          <td>72711111</td>
+          <td>
+              <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editUser"  ng-click="ShowForm()" ng-hide="formVisibility">Editar</button>
+              <button type="button" class="btn btn-outline-danger" >Eliminar</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Prueba12</td>
+          <td>prueba12@gmail.com</td>
+          <td>72712312</td>
+          <td>
+              <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editUser"  ng-click="ShowForm()" ng-hide="formVisibility">Editar</button>
+              <button type="button" class="btn btn-outline-danger" >Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+   <!-- Formulario de editar -->
+ 
+   <div  ng-show="formVisibility" class="modal fade" id="editUser" tabindex="-1" aria-labelledby="ejemModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ejemModalLabel">Editar datos de usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <form>
+                <div class="mb-3">
+                    <label for="ejemInputEmail" class="form-label">NOMBRE DE USUARIO: </label>
+                    <input type="text" formControlName="name" class="form-control" id="name"  placeholder="Nombre de usuario">
+                  </div>
+                <div class="mb-3">
+                  <label for="ejemInputEmail" class="form-label">EMAIL: </label>
+                  <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <label for="ejemInputEmail" class="form-label">DNI: </label>
+                    <input type="text" formControlName="dni" class="form-control" id="dni" placeholder="DNI" >
+                  </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-outline-success"  data-bs-dismiss="modal">Editar </button>
+                  </div>
+              </form>
+        </div>
+      </div>
+    </div>
+   </div>
+</section>
