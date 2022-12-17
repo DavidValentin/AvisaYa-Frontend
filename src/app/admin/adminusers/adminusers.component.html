@@ -7,7 +7,7 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col">Nombre</th>
+          <th scope="col">NOMBRE DE USUARIO</th>
           <th scope="col">Email</th>
           <th scope="col">DNI</th>
           <th scope="col">ACCION</th>
@@ -16,9 +16,19 @@
       </thead>
       <tbody>
         <tr>
-          <td>Prueba</td>
-          <td>prueba@gmail.com</td>
+          <td>Prueba1</td>
+          <td>prueba1@gmail.com</td>
           <td>72711111</td>
+          <td>
+              <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editUser"  ng-click="ShowForm()" ng-hide="formVisibility">Editar</button>
+              <button type="button" class="btn btn-outline-danger" >Eliminar</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Prueba12</td>
+          <td>prueba12@gmail.com</td>
+          <td>72712312</td>
           <td>
               <button type="button" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editUser"  ng-click="ShowForm()" ng-hide="formVisibility">Editar</button>
               <button type="button" class="btn btn-outline-danger" >Eliminar</button>
@@ -42,16 +52,16 @@
 
             <form>
                 <div class="mb-3">
-                    <label for="ejemInputEmail" class="form-label">NOMBRE </label>
-                    <input type="text" formControlName="name" class="form-control" id="name" >
+                    <label for="ejemInputEmail" class="form-label">NOMBRE DE USUARIO: </label>
+                    <input type="text" formControlName="name" class="form-control" id="name"  placeholder="Nombre de usuario">
                   </div>
                 <div class="mb-3">
-                  <label for="ejemInputEmail" class="form-label">EMAIL </label>
-                  <input type="email" formControlName="email" class="form-control" id="email" >
+                  <label for="ejemInputEmail" class="form-label">EMAIL: </label>
+                  <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
                 </div>
                 <div class="mb-3">
-                    <label for="ejemInputEmail" class="form-label">DNI </label>
-                    <input type="text" formControlName="dni" class="form-control" id="dni" >
+                    <label for="ejemInputEmail" class="form-label">DNI: </label>
+                    <input type="text" formControlName="dni" class="form-control" id="dni" placeholder="DNI" >
                   </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>

@@ -10,7 +10,7 @@ import { User } from '../models/user';
 export class UserService {
   urlApi: string = `${environment.api.baseUrl}`;
   constructor(private http: HttpClient) {}
-  crearCurso(user: User): Observable<any> {
+  crearUsuario(user: User): Observable<any> {
     return this.http.post(`${this.urlApi}user/registro`, user).pipe(
       map((response: any) => response.user as User),
       catchError(e => {
