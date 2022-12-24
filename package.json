@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@airbrake/browser": "^2.1.8",
     "@angular/animations": "^14.2.0",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
@@ -25,6 +26,7 @@
     "bootstrap": "^5.2.0",
     "firebase": "^9.14.0",
     "mapbox-gl": "^2.10.0",
+    "raygun4js": "^2.25.6",
     "rxjs": "~7.5.0",
     "sweetalert2": "^11.6.15",
     "tslib": "^2.3.0",
@@ -42,6 +44,7 @@
     "@angular/localize": "^14.2.0",
     "@types/jasmine": "~4.0.0",
     "@types/mapbox-gl": "^2.7.7",
+    "@types/raygun4js": "^2.13.8",
     "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.37.0",
     "eslint": "^8.23.1",
