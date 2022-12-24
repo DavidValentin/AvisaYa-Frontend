@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Delictivo } from '../models/delictivo';
 import { PublicacionService } from '../services/publicacion.service';
 
-import { DataService } from '../services/data.service';
+// import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-publicacion',
@@ -15,12 +15,11 @@ export class PublicacionComponent implements OnInit {
   message: string;
 
   constructor(
-    private publicacionService: PublicacionService,
-    private data: DataService
+    private publicacionService: PublicacionService // private data: DataService
   ) {}
 
   ngOnInit() {
-    this.data.currentDelito.subscribe(message => (this.message = message));
+    // this.data.currentDelito.subscribe(message => (this.message = message));
   }
 
   // getDataActoDelicitivo(){

@@ -6,7 +6,7 @@ import { MapViewComponent } from '../map-view/map-view.component';
 import { Delictivo } from '../models/delictivo';
 import { DelictivoService } from '../services/delictivo.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DataService } from '../services/data.service';
+// import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-registro-delictivo',
@@ -31,8 +31,7 @@ export class RegistroDelictivoComponent implements OnInit {
     private modalService: NgbModal,
     private delictivoService: DelictivoService,
     private formBuilder: FormBuilder,
-    private router: Router,
-    private data: DataService
+    private router: Router // private data: DataService
   ) {}
 
   openModalMapa() {
@@ -49,7 +48,7 @@ export class RegistroDelictivoComponent implements OnInit {
     );
   }
   ngOnInit(): void {
-    this.data.currentDelito.subscribe(message => (this.message = message));
+    // this.data.currentDelito.subscribe(message => (this.message = message));
 
     this.getFechaActual();
     this.delictivoForm = this.formBuilder.group({
@@ -91,9 +90,9 @@ export class RegistroDelictivoComponent implements OnInit {
     }
   }
 
-  newMessage() {
-    this.data.changeDelito('F');
-  }
+  // newMessage() {
+  //   this.data.changeDelito('F');
+  // }
 
   onFileChange(event: any) {
     //asignacion de la data seleccionada de la imagen
