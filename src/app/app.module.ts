@@ -10,6 +10,11 @@ import { InicioComponent } from './layout/inicio/inicio.component';
 import { DelictivoModule } from './delictivo/delictivo.module';
 import { HttpClientModule } from '@angular/common/http';
 
+import firebase from 'firebase/compat/app';
+import { environment } from 'src/environments/environment';
+
+firebase.initializeApp(environment.firebase);
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -42,12 +42,10 @@ export class RegisterComponent implements OnInit {
           text: `El usuario se ha creado con éxito ya puedes iniciar sesion`,
           icon: 'success',
           confirmButtonColor: '#2F6DF2',
-
-        }).then(function() {
-          window.location.href = "/security/login";
+        }).then(function () {
+          window.location.href = '/security/login';
+        });
       });
-      
-    });
+    }
   }
-}
 }

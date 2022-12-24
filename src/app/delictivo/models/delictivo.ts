@@ -5,4 +5,5 @@ export class Delictivo {
   hora: String = '';
   lugar: String = '';
   categoria: String = '';
+  evidencia: String | null = '';
 }
