@@ -7,6 +7,8 @@ describe('CommentFormComponent', () => {
   let component: CommentFormComponent;
   let fixture: ComponentFixture<CommentFormComponent>;
 
+  let spy: any;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [DelictivoModule],
@@ -20,5 +22,11 @@ describe('CommentFormComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should cancelComment be called', () => {
+    spy = spyOn(component, 'cancelComment').and.callThrough();
+    component.cancelComment(true);
+    expect(spy).toHaveBeenCalled();
   });
 });

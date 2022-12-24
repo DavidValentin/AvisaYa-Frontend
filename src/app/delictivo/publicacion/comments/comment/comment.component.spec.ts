@@ -9,6 +9,8 @@ describe('CommentComponent', () => {
   let component: CommentComponent;
   let fixture: ComponentFixture<CommentComponent>;
 
+  let spy: any;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [DelictivoModule],
@@ -22,5 +24,28 @@ describe('CommentComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should isCommentInEditMode be called', () => {
+    spy = spyOn(component, 'editComment').and.callThrough();
+    component.editComment();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should deleteComment be called', () => {
+    const mockdata = [
+      { id: 1, text: 'T1' },
+      { id: 2, text: 'T2' },
+    ];
+    component.comments = mockdata;
+    spy = spyOn(component, 'deleteComment').and.callThrough();
+    component.deleteComment();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should disableCommentEditMode be called', () => {
+    spy = spyOn(component, 'disableCommentEditMode').and.callThrough();
+    component.disableCommentEditMode(true);
+    expect(spy).toHaveBeenCalled();
   });
 });
