@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row m-3">
+    <div class="col-6" *ngFor="let d of delitos">
+      <div
+        class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 px-2 mx-1">
+        <div class="col-md-6 p-4 d-flex flex-column bg-white" id="contenido">
+          <h4 class="mb-0">{{ d?.titulo }}</h4>
+          <hr />
+          <div class="mb-1 text-muted">
+            <small class="badge rounded-pill bg-secondary">
+              {{ d.categoria }}
+            </small>
+          </div>
+          <p class="card-text mb-auto">
+            {{ d?.descripcion }}
+          </p>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center" id="imagen">
+          <img
+            src="{{ d?.evidencia }}"
+            alt=""
+            class="img w-100"
+            width="375"
+            height="250"
+            *ngIf="d?.evidencia != null; else noimagen" />
+          <ng-template #noimagen>
+            <img
+              class="img w-100"
+              src="https://media.istockphoto.com/id/1357365823/vector/default-image-icon-vector-missing-picture-page-for-website-design-or-mobile-app-no-photo.jpg?s=612x612&w=0&k=20&c=PM_optEhHBTZkuJQLlCjLz-v3zzxp-1mpNQZsdjrbns="
+              width="375"
+              height="250"
+              alt="" />
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

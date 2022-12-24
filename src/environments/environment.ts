@@ -13,7 +13,8 @@ export const environment = {
   },
   production: false,
   api: {
-    baseUrl: '',
+    // baseUrl: 'http://localhost:8080/api/',
+    baseUrl: 'https://avisa-ya-backend-acto-delictivo-2.vercel.app/api/',
   },
 };
 

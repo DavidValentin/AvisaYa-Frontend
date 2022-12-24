@@ -1,95 +1,114 @@
-<html>
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+          <p style="font-size: 50px; text-align:center">AvisaYA! - Registro</p>
+          <p style="text-align:center">
+        <img 
+          src="https://i.pinimg.com/736x/c8/5a/18/c85a184005980f2e0e75c71d6804b198.jpg "
+          width="450px" 
+          height="350px"
+          class="img-fluid"
+          alt="Sample image" />
+      </p> 
+          <p class="font-size: 10px; text-align:center">Bienvenido !!! Reporta actos delictivos como robos, disturbios, daños contra la <br> propiedad, etc  y ayuda a la mejora de tu comunidad  registrandote en AvisaYa!</p>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Register</title>
-    <meta name="description" content="Login - Register Template">
-    <meta name="author" content="Lorenzo Angelino aka MrLolok">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <style>
-        body {
-            background-color: #303641;
-        }
-    </style>
-</head>
-
-<body>
-    <div id="container-register">
-        <div id="title">
-            <i class="material-icons lock">lock</i> Registro-AvisaYA!<i class="material-icons lock">campaign</i>
-        </div>
-
-
-        <form>
-
-          
-          <div class="input">
-            <div class="input-addon">
-                <i class="material-icons">face</i>
-            </div>
-            <input id="username" placeholder="Nombre Completo" type="text" required class="validate" autocomplete="off">
-        </div>
-
-        <div class="clearfix"></div>
-        <div class="input">
-          <div class="input-addon">
-              <i class="material-icons">
-                <span class="material-symbols-outlined">
-                  co_present
-                  </span>
-              </i>
-          </div>
-          <input id="username" placeholder="DNI" type="text" required class="validate" autocomplete="off">
       </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <div class="card" >
+          <div class="container">
+        <form [formGroup]="userForm" autocomplete="off">  
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">REGISTRO - AVISAYA!</p>
+          </div>
 
-      <div class="clearfix"></div>
-
-
-        
-
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">email</i>
-                </div>
-                <input id="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
+             <!-- Nombre de usuario input -->
+             <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="form3Example3"
+                class="form-control"
+                formControlName="user_nombre"
+                class="form-control form-control-lg"
+                placeholder="Ingrese nombre completo" />
+              <label class="form-label" for="form3Example3">Nombre de Usuario</label>
             </div>
 
-            <div class="clearfix"></div>
-
-          
-
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">vpn_key</i>
-                </div>
-                <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+               <!-- DNI input -->
+          <div class="form-outline mb-4">
+              <input
+                type="text"
+                id="form3Example3"
+                class="form-control form-control-lg"
+                placeholder="Ingrese su DNI" />
+              <label class="form-label" for="form3Example3">DNI</label>
             </div>
 
+            
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input
+              type="email"
+              id="form3Example3"
+              formControlName="correo"
+              class="form-control form-control-lg"
+              placeholder="Ingrese su email" />
+            <label class="form-label" for="form3Example3">Email address</label>
+          </div>
 
-            <div class="clearfix"></div>
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input
+              type="password"
+              id="form3Example4"
+              formControlName="contrasenia"
+              class="form-control form-control-lg"
+              placeholder="Ingrese password" />
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
 
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">lock</i>
-                </div>
-                <input id="password" placeholder="Verificar Password" type="password" required class="validate" autocomplete="off">
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <input
+                type="password"
+                id="form3Example4"
+                class="form-control form-control-lg"
+                placeholder="Ingrese password nuevamente" />
+              <label class="form-label" for="form3Example4">Verificacion de Password</label>
             </div>
 
-    <p></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <!-- Checkbox -->
+            <div class="form-check mb-0">
+              <input
+                class="form-check-input me-2"
+                type="checkbox"
+                value=""
+                id="form2Example3" />
+              <label class="form-check-label" for="form2Example3">
+                Recordarme
+              </label>
+            </div>
+          </div>
 
-            <input type="submit" value="Register" />
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button
+              type="button"
+              (click)="crearUsuario()"
+              class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem">
+              Registrar
+            </button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">
+              Ya tienes una cuenta ?
+              <a href="/security/login" class="link-danger">Login</a>
+            </p>
+          </div>
         </form>
-
-        <div class="privacy">
-            <a href="#">Politica de privacidad</a>
-        </div>
-
-        <div class="register">
-            Ya tienes una cuenta ?
-            <a href="#"><button id="register-link">Login</button></a>
-        </div>
+      </div>
+       </div>
+      </div>
     </div>
-</body>
+  </div>
 
-</html>
+</section>

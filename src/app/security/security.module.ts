@@ -8,6 +8,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { FormComponent } from './components/form/form.component';
 import { FileComponent } from './components/file/file.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -16,6 +18,6 @@ import { FileComponent } from './components/file/file.component';
     FormComponent,
     FileComponent,
   ],
-  imports: [CommonModule, SecurityRoutingModule],
+  imports: [CommonModule, ReactiveFormsModule, SecurityRoutingModule],
 })
 export class SecurityModule {}
