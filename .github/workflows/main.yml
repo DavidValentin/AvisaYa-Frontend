@@ -3,20 +3,20 @@ on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]  
+    branches: [ master ]
 jobs:
   # Here you define the name of your workflow in this case "build"
   build:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
     steps:
       - name: Clonar
         uses: actions/checkout@v2
       - name: Usar Node version 16
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
+          node-version: 14.x
       # The following lines will Cache the npm modules when running the test so the actions will be faster
-      - name: Cache node modules        
+      - name: Cache node modules
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
@@ -28,9 +28,9 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-            
+
       - name: Setup
         run: npm ci
       - name: Testing
         run: npm test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-          
+
