@@ -6,6 +6,8 @@ import Swal from 'sweetalert2';
 import { MapViewComponent } from '../map-view/map-view.component';
 import { Delictivo } from '../models/delictivo';
 import { DelictivoService } from '../services/delictivo.service';
+import { ActivatedRoute, Router } from '@angular/router';
+// import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-registro-delictivo',
@@ -24,11 +26,14 @@ export class RegistroDelictivoComponent implements OnInit {
   delictivoForm: FormGroup;
   delictivo = new Delictivo();
 
+  message: string;
+
   constructor(
     private modalService: NgbModal,
     private delictivoService: DelictivoService,
     private formBuilder: FormBuilder,
-    private fileService: FileStorageService
+    private fileService: FileStorageService,
+    private router: Router // private data: DataService
   ) {}
 
   openModalMapa() {
@@ -45,6 +50,8 @@ export class RegistroDelictivoComponent implements OnInit {
     );
   }
   ngOnInit(): void {
+    // this.data.currentDelito.subscribe(message => (this.message = message));
+
     this.getFechaActual();
     this.delictivoForm = this.formBuilder.group({
       titulo: ['', [Validators.required, Validators.maxLength(30)]],
@@ -91,16 +98,20 @@ export class RegistroDelictivoComponent implements OnInit {
                   confirmButtonColor: '#2F6DF2',
                 }).then(() => {
                   //redireccionando a dashboard
-                  /* this.router.navigate(['cursos/dashboard']).then(() => {
-                  //permite ir a la misma pagina donde se encontraba
-                  window.location.reload();
-                }); */
+                  this.router.navigate(['delictivo/publicacion']).then(() => {
+                    //permite ir a la misma pagina donde se encontraba
+                    window.location.reload();
+                  });
                 });
               });
           });
       };
     }
   }
+
+  // newMessage() {
+  //   this.data.changeDelito('F');
+  // }
 
   onFileChange(event: any) {
     //asignacion de la data seleccionada de la imagen

@@ -48,12 +48,6 @@ describe('RegistroDelictivoComponent', () => {
     expect(component.delictivoForm.invalid).toBeTrue();
   });
 
-  it('should return invalid form by incomplete fields', () => {
-    const fecha = component.delictivoForm.controls['fecha'];
-    fecha.setValue('23-12-2022');
-    expect(component.delictivoForm.invalid).toBeTrue();
-  });
-
   it('should return invalid form', () => {
     component.crearActoDelictivo();
     expect(false).toEqual(false);
