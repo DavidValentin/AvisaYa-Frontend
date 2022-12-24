@@ -5,18 +5,21 @@
       <form class="formulario" [formGroup]="delictivoForm" autocomplete="off">
         <div class="input">
           <p class="text">T&iacute;tulo:</p>
-          <input class="entrada" placeholder="Título" formControlName="titulo" type="text" />
+          <input
+            class="entrada"
+            placeholder="Título"
+            formControlName="titulo"
+            type="text" />
         </div>
         <div class="input">
           <p class="text">Descripci&oacute;n:</p>
           <textarea
-          id="descripcionCurso"
-          type="text"
-          formControlName="descripcion"
-          class="entrada"
-          rows="4"
-          placeholder="Descripción"
-        ></textarea>
+            id="descripcionCurso"
+            type="text"
+            formControlName="descripcion"
+            class="entrada"
+            rows="4"
+            placeholder="Descripción"></textarea>
         </div>
         <div class="input">
           <p class="text">Fecha:</p>
@@ -36,22 +39,20 @@
           <button type="button" class="entrada" (click)="openModalMapa()">
             Seleccionar lugar
           </button>
-          
         </div>
         <div class="input">
-        <small class="text"></small>
-        <small
+          <small class="text"></small>
+          <small
             >Longitud: {{ longitud }}<br />
             Latitud: {{ latitud }}</small
-          > 
-
+          >
         </div>
         <div class="input">
           <p class="text">Evidencia:</p>
           <input
             type="file"
             id="btn_enviar"
-            class="entrada"
+            class="entrada form-control"
             (change)="onFileChange($event)" />
         </div>
         <div class="input">
@@ -63,17 +64,17 @@
             <option value="Corrupcion">Corrupci&oacute;n</option>
           </select>
         </div>
-        <div class="boton" >
+        <div class="boton">
           <button
-              type="button"
-              (click)="crearActoDelictivo()"
-              class="btn btn-success my-2 my-sm-0">
-              Registrar Acto Delictivo
+            type="button"
+            (click)="crearActoDelictivo()"
+            class="btn btn-success my-2 my-sm-0">
+            Registrar Acto Delictivo
           </button>
         </div>
       </form>
       <div class="svg-container">
-        <img src="assets/policia.svg" class="policia">
+        <img src="assets/policia.svg" class="policia" />
       </div>
     </div>
   </ng-container>

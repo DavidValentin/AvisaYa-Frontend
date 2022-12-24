@@ -21,7 +21,7 @@ export class FileComponent implements OnInit {
     let reader = new FileReader();
     let file = this.archivo;
     let usuario_id = 1;
-    // +sessionStorage.getItem('usuario_id')
+    // +sessionStorage!.getItem('usuario_id');
 
     reader.readAsDataURL(file);
     reader.onloadend = () => {
